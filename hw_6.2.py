@@ -1,8 +1,8 @@
 'hw_6.2'
 seconds_input = input('Введіть кількість секунд: ')
 
-if int(seconds_input) < 0 or int(seconds_input) > 864000:
-    print('Число має бути більше або дорівнювати 0 і менше ніж 864000')
+if int(seconds_input) < 0 or int(seconds_input) > 8640000:
+    print('Число має бути більше або дорівнювати 0 і менше ніж 8640000')
 else:
     seconds_in_minute = 60
     seconds_in_hour = 60 * seconds_in_minute
