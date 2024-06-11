@@ -13,8 +13,10 @@ else:
     minutes = (int(seconds_input) % int(seconds_in_hour)) // int(seconds_in_minute)
     seconds = int(seconds_input) % int(seconds_in_minute)
 
-    if days == 1:
+    if days % 10 == 1 and days != 11:
         days_str = f'{days} день'
+    elif days == 11:
+        days_str = f'{days} днів'
     elif days % 10 in {2, 3, 4} and days % 100 not in {12, 13, 14}:
         days_str = f'{days} дні'
     else:
