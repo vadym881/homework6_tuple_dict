@@ -1,14 +1,14 @@
 'hw_6.3'
 number_input = input('Введіть ціле число: ')
-number = int(number_input)
+output = 1
 
-while number > 9:
-    product = 1
-    start_number = number
-while start_number > 0:
-    digit = number % 10
-    product *= digit
-    start_number //= 10
-    start_number = product
+for digit in number_input:
+    output *= int(digit)
 
-    print(f'{number_input} -> {number}')
+while output > 9:
+    next_output = 1
+    for digit in str(output):
+        next_output *= int(digit)
+    output = next_output
+
+print(f'{number_input} -> {output}')
